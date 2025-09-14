@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almava Estética - Tratamientos Faciales Profesionales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8f4f0 0%, #e8ddd4 100%);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-lg">A</span>
+                    </div>
+                    <h1 class="font-playfair text-2xl font-bold text-gray-800">Almava Estética</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-rose-500 transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-gray-700 hover:text-rose-500 transition-colors">Servicios</a>
+                    <a href="#nosotros" class="text-gray-700 hover:text-rose-500 transition-colors">Nosotros</a>
+                    <a href="#contacto" class="text-gray-700 hover:text-rose-500 transition-colors">Contacto</a>
+                </div>
+                <button class="bg-rose-500 text-white px-6 py-2 rounded-full hover:bg-rose-600 transition-colors">
+                    Reservar Cita
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="gradient-bg min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="font-playfair text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+                        Tu piel perfecta
+                        <span class="text-rose-500">te espera</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Especialistas en tratamientos faciales avanzados para eliminar imperfecciones, 
+                        acné y rejuvenecer tu rostro con las técnicas más innovadoras.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-rose-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-rose-600 transition-colors shadow-lg">
+                            Consulta Gratuita
+                        </button>
+                        <button class="border-2 border-rose-500 text-rose-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-rose-50 transition-colors">
+                            Ver Tratamientos
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="floating-animation">
+                        <div class="w-80 h-80 mx-auto bg-gradient-to-br from-rose-200 to-pink-300 rounded-full flex items-center justify-center shadow-2xl">
+                            <svg class="w-40 h-40 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 7.5V9C15 10.1 14.1 11 13 11S11 10.1 11 9V7.5L5 7V9C5 10.1 4.1 11 3 11S1 10.1 1 9V7C1 5.9 1.9 5 3 5H21C22.1 5 23 5.9 23 7V9C23 10.1 22.1 11 21 11S19 10.1 19 9ZM12 13.5C14.5 13.5 16.5 15.5 16.5 18S14.5 22.5 12 22.5 7.5 20.5 7.5 18 9.5 13.5 12 13.5Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-yellow-300 rounded-full opacity-70"></div>
+                    <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-300 rounded-full opacity-70"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="font-playfair text-4xl font-bold text-gray-800 mb-4">Nuestros Tratamientos</h3>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ofrecemos una gama completa de tratamientos especializados para transformar tu piel
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">✨</span>
+                    </div>
+                    <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Tratamiento Anti-Acné</h4>
+                    <p class="text-gray-600 mb-6">
+                        Elimina granos, puntos negros y cicatrices con nuestros tratamientos especializados y tecnología avanzada.
+                    </p>
+                    <div class="text-rose-500 font-semibold text-lg mb-4">Desde $150</div>
+                    <button class="w-full bg-rose-50 text-rose-500 py-3 rounded-full font-semibold hover:bg-rose-100 transition-colors">
+                        Más Información
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">🌟</span>
+                    </div>
+                    <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Rejuvenecimiento Facial</h4>
+                    <p class="text-gray-600 mb-6">
+                        Reduce arrugas, líneas de expresión y mejora la textura de tu piel con tratamientos no invasivos.
+                    </p>
+                    <div class="text-rose-500 font-semibold text-lg mb-4">Desde $200</div>
+                    <button class="w-full bg-rose-50 text-rose-500 py-3 rounded-full font-semibold hover:bg-rose-100 transition-colors">
+                        Más Información
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">💎</span>
+                    </div>
+                    <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Limpieza Profunda</h4>
+                    <p class="text-gray-600 mb-6">
+                        Purifica y revitaliza tu piel eliminando impurezas y células muertas para un rostro radiante.
+                    </p>
+                    <div class="text-rose-500 font-semibold text-lg mb-4">Desde $80</div>
+                    <button class="w-full bg-rose-50 text-rose-500 py-3 rounded-full font-semibold hover:bg-rose-100 transition-colors">
+                        Más Información
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">🔥</span>
+                    </div>
+                    <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Peeling Químico</h4>
+                    <p class="text-gray-600 mb-6">
+                        Renueva tu piel eliminando capas dañadas para revelar una piel más suave y uniforme.
+                    </p>
+                    <div class="text-rose-500 font-semibold text-lg mb-4">Desde $120</div>
+                    <button class="w-full bg-rose-50 text-rose-500 py-3 rounded-full font-semibold hover:bg-rose-100 transition-colors">
+                        Más Información
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">💧</span>
+                    </div>
+                    <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Hidratación Intensiva</h4>
+                    <p class="text-gray-600 mb-6">
+                        Restaura la hidratación natural de tu piel con tratamientos que nutren en profundidad.
+                    </p>
+                    <div class="text-rose-500 font-semibold text-lg mb-4">Desde $90</div>
+                    <button class="w-full bg-rose-50 text-rose-500 py-3 rounded-full font-semibold hover:bg-rose-100 transition-colors">
+                        Más Información
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-2xl">🌸</span>
+                    </div>
+                    <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Tratamiento Personalizado</h4>
+                    <p class="text-gray-600 mb-6">
+                        Diseñamos un plan específico según las necesidades únicas de tu piel y objetivos estéticos.
+                    </p>
+                    <div class="text-rose-500 font-semibold text-lg mb-4">Consultar</div>
+                    <button class="w-full bg-rose-50 text-rose-500 py-3 rounded-full font-semibold hover:bg-rose-100 transition-colors">
+                        Más Información
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="font-playfair text-4xl font-bold text-gray-800 mb-6">¿Por qué elegir Almava?</h3>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Con más de 10 años de experiencia, somos especialistas en transformar la piel de nuestros pacientes 
+                        utilizando las técnicas más avanzadas y productos de la más alta calidad.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Profesionales Certificados</h4>
+                                <p class="text-gray-600">Nuestro equipo cuenta con certificaciones internacionales en estética facial.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Tecnología Avanzada</h4>
+                                <p class="text-gray-600">Utilizamos equipos de última generación para garantizar los mejores resultados.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                                <span class="text-white text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Resultados Garantizados</h4>
+                                <p class="text-gray-600">Más del 95% de nuestros pacientes quedan completamente satisfechos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-white rounded-2xl p-8 shadow-2xl">
+                        <div class="text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                                <span class="text-3xl text-white">👩‍⚕️</span>
+                            </div>
+                            <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-4">Dra. María Almava</h4>
+                            <p class="text-gray-600 mb-6">
+                                Especialista en Dermatología Estética con más de 15 años de experiencia. 
+                                Certificada por la Academia Internacional de Estética Facial.
+                            </p>
+                            <div class="flex justify-center space-x-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-rose-500">1000+</div>
+                                    <div class="text-sm text-gray-600">Pacientes</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-rose-500">15</div>
+                                    <div class="text-sm text-gray-600">Años</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-rose-500">98%</div>
+                                    <div class="text-sm text-gray-600">Satisfacción</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="font-playfair text-4xl font-bold text-gray-800 mb-4">Reserva tu Consulta</h3>
+                <p class="text-xl text-gray-600">
+                    Da el primer paso hacia la piel que siempre has deseado
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-8">
+                        <h4 class="font-playfair text-2xl font-semibold text-gray-800 mb-6">Información de Contacto</h4>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white">📍</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Dirección</h5>
+                                    <p class="text-gray-600">Av. Estética 123, Centro Médico Plaza</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white">📞</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Teléfono</h5>
+                                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white">✉️</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Email</h5>
+                                    <p class="text-gray-600">info@almavaestetica.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-rose-500 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-white">🕒</span>
+                                </div>
+                                <div>
+                                    <h5 class="font-semibold text-gray-800">Horarios</h5>
+                                    <p class="text-gray-600">Lun - Vie: 9:00 AM - 7:00 PM<br>Sáb: 9:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Nombre</label>
+                                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-semibold mb-2">Teléfono</label>
+                                <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent" placeholder="Tu teléfono">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent" placeholder="tu@email.com">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Tratamiento de Interés</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent">
+                                <option>Selecciona un tratamiento</option>
+                                <option>Tratamiento Anti-Acné</option>
+                                <option>Rejuvenecimiento Facial</option>
+                                <option>Limpieza Profunda</option>
+                                <option>Peeling Químico</option>
+                                <option>Hidratación Intensiva</option>
+                                <option>Consulta General</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-transparent" placeholder="Cuéntanos sobre tus necesidades..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-rose-500 text-white py-4 rounded-lg text-lg font-semibold hover:bg-rose-600 transition-colors shadow-lg">
+                            Enviar Consulta
+                        </button>
+                        
+                        <p class="text-sm text-gray-500 text-center mt-4">
+                            * Este es un formulario de demostración. Los datos no se envían realmente.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold text-lg">A</span>
+                        </div>
+                        <h4 class="font-playfair text-2xl font-bold">Almava Estética</h4>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Transformando vidas a través de tratamientos estéticos profesionales y personalizados.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-rose-500 transition-colors">
+                            <span>📘</span>
+                        </button>
+                        <button class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-rose-500 transition-colors">
+                            <span>📷</span>
+                        </button>
+                        <button class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-rose-500 transition-colors">
+                            <span>🐦</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold text-lg mb-4">Enlaces Rápidos</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-300 hover:text-rose-400 transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-300 hover:text-rose-400 transition-colors">Servicios</a></li>
+                        <li><a href="#nosotros" class="text-gray-300 hover:text-rose-400 transition-colors">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-gray-300 hover:text-rose-400 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold text-lg mb-4">Horarios de Atención</h5>
+                    <div class="text-gray-300 space-y-2">
+                        <p>Lunes - Viernes: 9:00 AM - 7:00 PM</p>
+                        <p>Sábado: 9:00 AM - 5:00 PM</p>
+                        <p>Domingo: Cerrado</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">
+                    © 2024 Almava Estética. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = '¡Mensaje Enviado!';
+            button.classList.add('bg-green-500');
+            button.classList.remove('bg-rose-500');
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.remove('bg-green-500');
+                button.classList.add('bg-rose-500');
+                this.reset();
+            }, 3000);
+        });
+
+        // Service card click handlers
+        document.querySelectorAll('.service-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceName = this.closest('.service-card').querySelector('h4').textContent;
+                alert(`¡Gracias por tu interés en ${serviceName}! Te contactaremos pronto para agendar tu consulta.`);
+            });
+        });
+
+        // CTA button handlers
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Consulta Gratuita') || button.textContent.includes('Reservar Cita')) {
+                button.addEventListener('click', function() {
+                    document.querySelector('#contacto').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            if (button.textContent.includes('Ver Tratamientos')) {
+                button.addEventListener('click', function() {
+                    document.querySelector('#servicios').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97ebe4eea272c2e4',t:'MTc1NzgxMTA2OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
